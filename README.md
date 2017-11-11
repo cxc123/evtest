@@ -58,10 +58,4 @@ Note:- Test has support to run for chrome and Firefox browser
 11. Open “Закладки” and check that the ads on the page match the previously selected
 12. Close the browser.
 
-## Product Detail
-
-Each product is described by this html
-<a data="eiU4MCVBNSU4NGIlQjBpJThGJTk0cyU4MSVBNCU4MmVoaiU4RSU5N3klODAlQTM=|APrP148Zd" id="dm_42985316" class="am" href="/msg/ru/electronics/computers/noutbooks/kjigf.html">Garantija. Transformer Dell Venue 11 Pro (7140), Ssd 120Gb, 4Gb Ram, i5-4300Y, 1920x1080, Intel </a>
-
-so for a given product ProductDetail class is used which determines a product and assuming each product has unique id(eg:dm_42985316) and href(/msg/ru/electronics/computers/noutbooks/kjigf.html) which determines product uniquely
 
