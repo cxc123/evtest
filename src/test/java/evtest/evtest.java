@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utility.ListComparator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,6 +42,7 @@ public class evtest extends evBaseTest {
     @Test
     public void testcase_1() throws  Exception
     {
+        List<ProductDetail> expectedList= new ArrayList<>();
         HomePage homePage = new HomePage(driver);
         homePage.loadHomePage();
         /* changing language to russian */
@@ -73,7 +75,13 @@ public class evtest extends evBaseTest {
         /* navigating to search result page */
         searchResultPage.loadSearchResultPage();
         /* selecting 3 ads from search result */
-        List<ProductDetail> expectedList=searchResultPage.selectProduct(3);
+        if(searchResultPage.CountSearchResult() >= 3) {
+            expectedList = searchResultPage.selectProduct(3);
+        }
+        else
+        {
+            expectedList=searchResultPage.selectProduct(searchResultPage.CountSearchResult());
+        }
         /* adding selected ads to memo */
         searchResultPage.addToMemo();
         /* navigating to memo page */

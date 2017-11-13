@@ -61,6 +61,10 @@ public class SearchResultPage {
         return new MemoPage(webDriver);
 
     }
+    public int CountSearchResult() throws Exception
+    {
+        return this.productElement.size();
+    }
     public List<ProductDetail> selectProduct(int n)throws TimeoutException,NoSuchElementException
     {
         List<ProductDetail> productDetails = new ArrayList<>();
